@@ -7,10 +7,13 @@ public class Main {
         double length1 = calculateLineLength(1, 2, 3, 4);
         double length2 = calculateLineLength(5, 6, 7, 8);
 
-        if (Double.valueOf(length1).equals(Double.valueOf(length2))) {
+        int comparison = Double.compare(length1, length2);
+        if (comparison == 0) {
             System.out.println("The two lines are equal.");
+        } else if (comparison > 0) {
+            System.out.println("The first line is longer than the second line.");
         } else {
-            System.out.println("The two lines are not equal.");
+            System.out.println("The first line is shorter than the second line.");
         }
     }
 
